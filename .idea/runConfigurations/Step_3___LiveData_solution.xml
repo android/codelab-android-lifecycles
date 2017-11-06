@@ -6,7 +6,6 @@
     <option name="PM_INSTALL_OPTIONS" value="" />
     <option name="ACTIVITY_EXTRA_FLAGS" value="" />
     <option name="MODE" value="specific_activity" />
-    <option name="PREFERRED_AVD" value="" />
     <option name="CLEAR_LOGCAT" value="false" />
     <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
     <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
@@ -40,12 +39,13 @@
       <option name="SHOW_OPTIMIZED_WARNING" value="true" />
     </Native>
     <Profilers>
-      <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-      <option name="SUPPORT_LIB_ENABLED" value="true" />
-      <option name="INSTRUMENTATION_ENABLED" value="true" />
+      <option name="ADVANCED_PROFILING_ENABLED" value="false" />
     </Profilers>
     <option name="DEEP_LINK" value="" />
     <option name="ACTIVITY_CLASS" value="com.example.android.lifecycles.step3_solution.ChronoActivity3" />
-    <method />
+    <method>
+      <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510009601189" />
+    </method>
   </configuration>
 </component>
