@@ -16,18 +16,18 @@
 
 package com.example.android.lifecycles.step3;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-import android.arch.lifecycle.LifecycleActivity;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import com.example.android.codelabs.lifecycle.R;
 
 
-public class ChronoActivity3 extends LifecycleActivity {
+public class ChronoActivity3 extends AppCompatActivity {
 
     private LiveDataTimerViewModel mLiveDataTimerViewModel;
 
