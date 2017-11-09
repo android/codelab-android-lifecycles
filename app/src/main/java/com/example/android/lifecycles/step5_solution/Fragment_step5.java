@@ -17,7 +17,6 @@
 package com.example.android.lifecycles.step5_solution;
 
 
-import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -76,7 +75,7 @@ public class Fragment_step5 extends Fragment {
 
         // Update the SeekBar when the ViewModel is changed.
         mSeekBarViewModel.seekbarValue.observe(
-                (LifecycleOwner) getActivity(),
+            getActivity(),
                 new Observer<Integer>() {
             @Override
             public void onChanged(@Nullable Integer value) {

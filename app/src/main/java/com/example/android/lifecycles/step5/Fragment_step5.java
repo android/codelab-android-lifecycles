@@ -40,7 +40,7 @@ public class Fragment_step5 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_step5, container, false);
-        mSeekBar = (SeekBar) root.findViewById(R.id.seekBar);
+        mSeekBar = root.findViewById(R.id.seekBar);
 
         // TODO: get ViewModel
         subscribeSeekBar();

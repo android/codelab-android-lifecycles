@@ -16,15 +16,15 @@
 
 package com.example.android.lifecycles.step2;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Chronometer;
 
-import android.arch.lifecycle.LifecycleActivity;
-import android.arch.lifecycle.ViewModelProviders;
 import com.example.android.codelabs.lifecycle.R;
 
-public class ChronoActivity2 extends LifecycleActivity {
+public class ChronoActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class ChronoActivity2 extends LifecycleActivity {
                 = ViewModelProviders.of(this).get(ChronometerViewModel.class);
 
         // Get the chronometer reference
-        Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        Chronometer chronometer = findViewById(R.id.chronometer);
 
         if (chronometerViewModel.getStartDate() == null) {
             // If the start date is not defined, it's a new ViewModel so set it.
