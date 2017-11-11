@@ -54,7 +54,7 @@ public class LiveDataTimerViewModel extends ViewModel {
                     public void run() {
 
                         //TODO set the new value
-
+                        mElapsedTime.setValue(newValue);
                     }
                 });
             }
