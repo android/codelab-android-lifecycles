@@ -50,7 +50,7 @@ public class LocationActivity extends LifecycleActivity {
 
     private void bindLocationListener() {
         // Changed first argument from "this" to lifecycleOwner
-        BoundLocationManager.bindLocationListenerIn((LifecycleRegistryOwner) this, mGpsListener, getApplicationContext());
+        BoundLocationManager.bindLocationListenerIn(this, mGpsListener, getApplicationContext());
     }
 
     @Override
