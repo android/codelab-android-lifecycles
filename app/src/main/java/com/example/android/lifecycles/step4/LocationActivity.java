@@ -17,6 +17,7 @@
 package com.example.android.lifecycles.step4;
 
 import android.Manifest;
+import android.arch.lifecycle.LifecycleRegistryOwner;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -48,6 +49,7 @@ public class LocationActivity extends LifecycleActivity {
     }
 
     private void bindLocationListener() {
+        // Changed first argument from "this" to lifecycleOwner
         BoundLocationManager.bindLocationListenerIn(this, mGpsListener, getApplicationContext());
     }
 

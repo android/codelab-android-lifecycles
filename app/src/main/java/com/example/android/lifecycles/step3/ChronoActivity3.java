@@ -54,5 +54,6 @@ public class ChronoActivity3 extends LifecycleActivity {
         };
 
         //TODO: observe the ViewModel's elapsed time
+        mLiveDataTimerViewModel.getElapsedTime().observe(this, elapsedTimeObserver);
     }
 }

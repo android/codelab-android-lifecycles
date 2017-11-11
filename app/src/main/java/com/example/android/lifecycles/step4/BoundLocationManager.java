@@ -16,6 +16,9 @@
 
 package com.example.android.lifecycles.step4;
 
+import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.LifecycleOwner;
+import android.arch.lifecycle.OnLifecycleEvent;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
@@ -27,7 +30,7 @@ import android.arch.lifecycle.LifecycleRegistryOwner;
 
 
 public class BoundLocationManager {
-    public static void bindLocationListenerIn(LifecycleRegistryOwner lifecycleOwner,
+    public static void bindLocationListenerIn(LifecycleOwner lifecycleOwner,
                                               LocationListener listener, Context context) {
         new BoundLocationListener(lifecycleOwner, listener, context);
     }
@@ -38,14 +41,16 @@ public class BoundLocationManager {
         private LocationManager mLocationManager;
         private final LocationListener mListener;
 
-        public BoundLocationListener(LifecycleRegistryOwner lifecycleOwner,
+        public BoundLocationListener(LifecycleOwner lifecycleOwner,
                                      LocationListener listener, Context context) {
             mContext = context;
             mListener = listener;
             //TODO: Add lifecycle observer
+            lifecycleOwner.getLifecycle().addObserver(this);
         }
 
         //TODO: Call this on resume
+        @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
         void addLocationListener() {
             // Note: Use the Fused Location Provider from Google Play Services instead.
             // https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderApi
@@ -64,6 +69,7 @@ public class BoundLocationManager {
         }
 
         //TODO: Call this on pause
+        @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
         void removeLocationListener() {
             if (mLocationManager == null) {
                 return;
