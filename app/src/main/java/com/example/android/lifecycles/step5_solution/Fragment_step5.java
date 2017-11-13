@@ -17,7 +17,6 @@
 package com.example.android.lifecycles.step5_solution;
 
 
-import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -46,7 +45,7 @@ public class Fragment_step5 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_step5, container, false);
-        mSeekBar = (SeekBar) root.findViewById(R.id.seekBar);
+        mSeekBar = root.findViewById(R.id.seekBar);
 
         mSeekBarViewModel = ViewModelProviders.of(getActivity()).get(SeekBarViewModel.class);
 
@@ -75,9 +74,7 @@ public class Fragment_step5 extends Fragment {
         });
 
         // Update the SeekBar when the ViewModel is changed.
-        mSeekBarViewModel.seekbarValue.observe(
-                (LifecycleOwner) getActivity(),
-                new Observer<Integer>() {
+        mSeekBarViewModel.seekbarValue.observe(getActivity(), new Observer<Integer>() {
             @Override
             public void onChanged(@Nullable Integer value) {
                 if (value != null) {

@@ -26,14 +26,14 @@ import android.arch.lifecycle.ViewModel;
 public class ChronometerViewModel extends ViewModel {
 
     @Nullable
-    private Long startDate;
+    private Long mStartTime;
 
     @Nullable
-    public Long getStartDate() {
-        return startDate;
+    public Long getStartTime() {
+        return mStartTime;
     }
 
-    public void setStartDate(final long startDate) {
-        this.startDate = startDate;
+    public void setStartTime(final long startTime) {
+        this.mStartTime = startTime;
     }
 }

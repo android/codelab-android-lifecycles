@@ -16,13 +16,10 @@
 
 package com.example.android.lifecycles.step3_solution;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.SystemClock;
-
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
+import android.os.SystemClock;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -48,13 +45,7 @@ public class LiveDataTimerViewModel extends ViewModel {
             public void run() {
                 final long newValue = (SystemClock.elapsedRealtime() - mInitialTime) / 1000;
                 // setValue() cannot be called from a background thread so post to main thread.
-                new Handler(Looper.getMainLooper()).post(new Runnable() {
-                    @Override
-                    public void run() {
-                        mElapsedTime.setValue(newValue);
-
-                    }
-                });
+                mElapsedTime.postValue(newValue);
             }
         }, ONE_SECOND, ONE_SECOND);
 

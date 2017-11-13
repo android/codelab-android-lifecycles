@@ -30,7 +30,7 @@ public class ChronoActivity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Chronometer chronometer = (Chronometer) findViewById(R.id.chronometer);
+        Chronometer chronometer = findViewById(R.id.chronometer);
 
         chronometer.start();
     }
