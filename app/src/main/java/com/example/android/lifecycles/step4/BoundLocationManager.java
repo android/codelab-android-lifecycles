@@ -16,18 +16,17 @@
 
 package com.example.android.lifecycles.step4;
 
+import android.arch.lifecycle.LifecycleObserver;
+import android.arch.lifecycle.LifecycleOwner;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.util.Log;
 
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.LifecycleRegistryOwner;
-
 
 public class BoundLocationManager {
-    public static void bindLocationListenerIn(LifecycleRegistryOwner lifecycleOwner,
+    public static void bindLocationListenerIn(LifecycleOwner lifecycleOwner,
                                               LocationListener listener, Context context) {
         new BoundLocationListener(lifecycleOwner, listener, context);
     }
@@ -38,7 +37,7 @@ public class BoundLocationManager {
         private LocationManager mLocationManager;
         private final LocationListener mListener;
 
-        public BoundLocationListener(LifecycleRegistryOwner lifecycleOwner,
+        public BoundLocationListener(LifecycleOwner lifecycleOwner,
                                      LocationListener listener, Context context) {
             mContext = context;
             mListener = listener;

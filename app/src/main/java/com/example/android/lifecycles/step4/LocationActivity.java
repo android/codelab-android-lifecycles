@@ -23,13 +23,13 @@ import android.location.LocationListener;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import android.arch.lifecycle.LifecycleActivity;
 import com.example.android.codelabs.lifecycle.R;
 
-public class LocationActivity extends LifecycleActivity {
+public class LocationActivity extends AppCompatActivity {
 
     private static final int REQUEST_LOCATION_PERMISSION_CODE = 1;
 
@@ -71,7 +71,7 @@ public class LocationActivity extends LifecycleActivity {
     private class MyLocationListener implements LocationListener {
         @Override
         public void onLocationChanged(Location location) {
-            TextView textView = (TextView) findViewById(R.id.location);
+            TextView textView = findViewById(R.id.location);
             textView.setText(location.getLatitude() + ", " + location.getLongitude());
         }
 
