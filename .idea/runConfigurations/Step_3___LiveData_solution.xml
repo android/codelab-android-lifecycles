@@ -45,7 +45,7 @@
     <option name="ACTIVITY_CLASS" value="com.example.android.lifecycles.step3_solution.ChronoActivity3" />
     <method>
       <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510587605138" />
+      <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510587765144" />
     </method>
   </configuration>
 </component>
