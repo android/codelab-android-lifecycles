@@ -27,9 +27,14 @@ import android.location.LocationManager;
 import android.util.Log;
 
 public class BoundLocationManager {
-    public static void bindLocationListenerIn(LifecycleOwner lifecycleOwner,
-                                              LocationListener listener, Context context) {
-        new BoundLocationListener(lifecycleOwner, listener, context);
+
+    public static LifecycleObserver bindLocationListenerIn(LifecycleOwner lifecycleOwner,
+                                                               LocationListener listener, Context context) {
+        return new BoundLocationListener(lifecycleOwner, listener, context);
+    }
+
+    public static void unBindLocationListener(LifecycleOwner lifecycleOwner, LifecycleObserver observer){
+        lifecycleOwner.getLifecycle().removeObserver(observer);
     }
 
     @SuppressWarnings("MissingPermission")

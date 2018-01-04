@@ -17,6 +17,7 @@
 package com.example.android.lifecycles.step4_solution;
 
 import android.Manifest;
+import android.arch.lifecycle.LifecycleObserver;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -34,10 +35,11 @@ public class LocationActivity extends AppCompatActivity {
     private static final int REQUEST_LOCATION_PERMISSION_CODE = 1;
 
     private LocationListener mGpsListener = new MyLocationListener();
+    private LifecycleObserver mLocationObserver;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-            @NonNull int[] grantResults) {
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults[0] == PackageManager.PERMISSION_GRANTED
                 && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
@@ -48,7 +50,11 @@ public class LocationActivity extends AppCompatActivity {
     }
 
     private void bindLocationListener() {
-        BoundLocationManager.bindLocationListenerIn(this, mGpsListener, getApplicationContext());
+        mLocationObserver = BoundLocationManager.bindLocationListenerIn(this, mGpsListener, getApplicationContext());
+    }
+
+    private void unBindLocationListener() {
+        BoundLocationManager.unBindLocationListener(this, mLocationObserver);
     }
 
     @Override
@@ -66,6 +72,12 @@ public class LocationActivity extends AppCompatActivity {
         } else {
             bindLocationListener();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unBindLocationListener();
     }
 
     private class MyLocationListener implements LocationListener {
