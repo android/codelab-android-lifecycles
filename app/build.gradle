@@ -18,7 +18,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.0'
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId 'com.example.android.codelabs.lifecycle'
         minSdkVersion 21
@@ -41,17 +41,29 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:' + rootProject.espressoVersion, {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //Espresso
+    def espresso_version = "3.0.1"
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$espresso_version", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion
-    compile 'com.android.support:cardview-v7:' + rootProject.supportLibVersion
-    compile 'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion
-    compile 'com.android.support:support-v4:' + rootProject.supportLibVersion
-    testCompile 'junit:junit:4.12'
-    compile 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion
-    compile 'android.arch.persistence.room:runtime:' + rootProject.archRoomVersion
-    annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.archLifecycleVersion
-    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.archRoomVersion
+    testImplementation 'junit:junit:4.12'
+
+    //Support Library
+    def support_lib_version = "27.1.1"
+    implementation "com.android.support:appcompat-v7:$support_lib_version"
+    implementation "com.android.support:cardview-v7:$support_lib_version"
+    implementation "com.android.support:recyclerview-v7:$support_lib_version"
+    implementation "com.android.support:support-v4:$support_lib_version"
+
+    //Livecycle Components
+    def lifecycle_version = "1.1.1"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+
+    //Room
+    def room_version = "1.1.0"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
 }
