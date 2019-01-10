@@ -18,7 +18,7 @@
 
     <data>
 
-        <import type="android.databinding.ObservableField" />
+        <import type="androidx.databinding.ObservableField" />
 
         <variable
             name="elapsedTime"

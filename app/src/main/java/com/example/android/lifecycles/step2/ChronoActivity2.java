@@ -16,10 +16,10 @@
 
 package com.example.android.lifecycles.step2;
 
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Chronometer;
 
 import com.example.android.codelabs.lifecycle.R;

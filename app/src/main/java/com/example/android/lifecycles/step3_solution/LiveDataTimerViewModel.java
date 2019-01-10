@@ -16,9 +16,9 @@
 
 package com.example.android.lifecycles.step3_solution;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 import android.os.SystemClock;
 
 import java.util.Timer;
