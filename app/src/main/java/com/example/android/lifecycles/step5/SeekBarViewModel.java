@@ -16,8 +16,8 @@
 
 package com.example.android.lifecycles.step5;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 /**
  * A ViewModel used in step 5.

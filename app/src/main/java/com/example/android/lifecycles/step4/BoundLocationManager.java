@@ -16,8 +16,8 @@
 
 package com.example.android.lifecycles.step4;
 
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;

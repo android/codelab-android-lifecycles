@@ -24,7 +24,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -40,19 +40,16 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion
-    implementation 'com.android.support:cardview-v7:' + rootProject.supportLibVersion
-    implementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion
-    implementation 'com.android.support:support-v4:' + rootProject.supportLibVersion
-    implementation 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion
-    implementation 'android.arch.persistence.room:runtime:' + rootProject.archRoomVersion
+    implementation 'androidx.appcompat:appcompat:' + rootProject.appCompatVersion
+    implementation 'androidx.cardview:cardview:' + rootProject.cardViewVersion
+    implementation 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
+    implementation 'androidx.legacy:legacy-support-v4:' + rootProject.legacySupportVersion
+    implementation 'androidx.lifecycle:lifecycle-extensions:' + rootProject.lifecycleVersion
+    implementation 'androidx.room:room-runtime:' + rootProject.roomVersion
 
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:' + rootProject.espressoVersion, {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:' + rootProject.espressoVersion)
+    testImplementation 'junit:junit:' + rootProject.junitVersion
 
-    annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.archLifecycleVersion
-    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.archRoomVersion
+    annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.lifecycleVersion
+    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.roomVersion
 }

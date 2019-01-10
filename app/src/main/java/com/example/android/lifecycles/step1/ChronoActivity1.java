@@ -17,7 +17,7 @@
 package com.example.android.lifecycles.step1;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Chronometer;
 
 import com.example.android.codelabs.lifecycle.R;

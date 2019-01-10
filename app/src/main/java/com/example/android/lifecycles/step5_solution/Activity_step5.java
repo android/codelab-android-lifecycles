@@ -17,7 +17,7 @@
 package com.example.android.lifecycles.step5_solution;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.codelabs.lifecycle.R;
 
