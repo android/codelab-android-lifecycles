@@ -42,14 +42,14 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:' + rootProject.appCompatVersion
     implementation 'androidx.cardview:cardview:' + rootProject.cardViewVersion
-    implementation 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
     implementation 'androidx.legacy:legacy-support-v4:' + rootProject.legacySupportVersion
     implementation 'androidx.lifecycle:lifecycle-extensions:' + rootProject.lifecycleVersion
+    implementation 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
     implementation 'androidx.room:room-runtime:' + rootProject.roomVersion
 
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:' + rootProject.espressoVersion)
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
     testImplementation 'junit:junit:' + rootProject.junitVersion
 
-    annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.lifecycleVersion
-    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.roomVersion
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:' + rootProject.lifecycleVersion
+    annotationProcessor 'androidx.room:room-compiler:' + rootProject.roomVersion
 }
