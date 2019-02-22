@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2017, The Android Open Source Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~      http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
--->
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.codelabs.lifecycle">
 
@@ -27,42 +13,76 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.android.lifecycles.step1.ChronoActivity1">
+        <activity
+            android:name="com.example.android.lifecycles.step1.ChronoActivity1"
+            android:label="LC Step1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.step2.ChronoActivity2">
+        <activity
+            android:name="com.example.android.lifecycles.step2.ChronoActivity2"
+            android:label="LC Step2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.step3.ChronoActivity3">
+        <activity
+            android:name="com.example.android.lifecycles.step3.ChronoActivity3"
+            android:label="LC Step3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.step3_solution.ChronoActivity3">
+        <activity
+            android:name="com.example.android.lifecycles.step3_solution.ChronoActivity3"
+            android:label="LC Step3 Sol">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.step4_solution.LocationActivity">
+        <activity
+            android:name="com.example.android.lifecycles.step4_solution.LocationActivity"
+            android:label="LC Step4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.step4.LocationActivity">
+        <activity
+            android:name="com.example.android.lifecycles.step4.LocationActivity"
+            android:label="LC Step4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.step5.Activity_step5">
+        <activity
+            android:name="com.example.android.lifecycles.step5.Activity_step5"
+            android:label="LC Step5">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.step5_solution.Activity_step5">
+        <activity
+            android:name="com.example.android.lifecycles.step5_solution.Activity_step5"
+            android:label="LC Step5 Sol">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.lifecycles.step6.SavedStateActivity"
+            android:label="LC Step6">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.lifecycles.step6_solution.SavedStateActivity"
+            android:label="LC Step6 Sol">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

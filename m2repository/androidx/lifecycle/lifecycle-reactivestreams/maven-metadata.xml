@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>androidx.lifecycle</groupId>
+  <artifactId>lifecycle-reactivestreams</artifactId>
+  <versioning>
+    <release>2.1.0-alpha01</release>
+    <versions>
+      <version>2.1.0-alpha01</version>
+    </versions>
+    <lastUpdated>20181205173747</lastUpdated>
+  </versioning>
+</metadata>
