@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, The Android Open Source Project
+ * Copyright 2019, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,10 @@
 package com.example.android.lifecycles.step5_solution;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.codelabs.lifecycle.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Shows two {@link Fragment_step5} fragments.

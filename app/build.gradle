@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, The Android Open Source Project
+ * Copyright 2019, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,16 +40,22 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:' + rootProject.appCompatVersion
-    implementation 'androidx.cardview:cardview:' + rootProject.cardViewVersion
-    implementation 'androidx.legacy:legacy-support-v4:' + rootProject.legacySupportVersion
-    implementation 'androidx.lifecycle:lifecycle-extensions:' + rootProject.lifecycleVersion
-    implementation 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
-    implementation 'androidx.room:room-runtime:' + rootProject.roomVersion
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.cardview:cardview:$cardViewVersion"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupportVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
 
-    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
-    testImplementation 'junit:junit:' + rootProject.junitVersion
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"
 
-    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:' + rootProject.lifecycleVersion
-    annotationProcessor 'androidx.room:room-compiler:' + rootProject.roomVersion
+    // Saved state module
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$savedStateVersion"
+
+    // Tests
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    testImplementation "junit:junit:$junitVersion"
 }
