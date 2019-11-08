@@ -40,7 +40,6 @@ public class SavedStateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.saved_state_activity);
 
-
         // Obtain the ViewModel
         mSavedStateViewModel = new ViewModelProvider(this).get(SavedStateViewModel.class);
 
@@ -50,7 +49,6 @@ public class SavedStateActivity extends AppCompatActivity {
             public void onChanged(String savedString) {
                 ((TextView)findViewById(R.id.saved_vm_tv))
                         .setText(getString(R.string.saved_in_vm, savedString));
-
             }
         });
 

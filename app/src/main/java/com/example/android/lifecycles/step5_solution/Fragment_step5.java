@@ -34,8 +34,6 @@ import android.widget.SeekBar;
 import com.example.android.codelabs.lifecycle.R;
 import com.example.android.lifecycles.step5.SeekBarViewModel;
 
-import static java.util.Objects.requireNonNull;
-
 /**
  * Shows a SeekBar that is synced with a value in a ViewModel.
  */
@@ -52,7 +50,7 @@ public class Fragment_step5 extends Fragment {
         View root = inflater.inflate(R.layout.fragment_step5, container, false);
         mSeekBar = root.findViewById(R.id.seekBar);
 
-        mSeekBarViewModel = new ViewModelProvider(requireNonNull(getActivity())).get(SeekBarViewModel.class);
+        mSeekBarViewModel = new ViewModelProvider(requireActivity()).get(SeekBarViewModel.class);
 
         subscribeSeekBar();
 
@@ -80,7 +78,7 @@ public class Fragment_step5 extends Fragment {
 
         // Update the SeekBar when the ViewModel is changed.
         mSeekBarViewModel.seekbarValue.observe(
-                requireNonNull(getActivity()), new Observer<Integer>() {
+                requireActivity(), new Observer<Integer>() {
                     @Override
                     public void onChanged(@Nullable Integer value) {
                         if (value != null) {

@@ -16,7 +16,6 @@
 
 package com.example.android.lifecycles.step2;
 
-
 import android.os.Bundle;
 import android.os.SystemClock;
 import androidx.appcompat.app.AppCompatActivity;
