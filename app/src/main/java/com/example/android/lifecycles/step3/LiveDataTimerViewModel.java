@@ -34,10 +34,11 @@ public class LiveDataTimerViewModel extends ViewModel {
     private MutableLiveData<Long> mElapsedTime = new MutableLiveData<>();
 
     private long mInitialTime;
+    private final Timer timer;
 
     public LiveDataTimerViewModel() {
         mInitialTime = SystemClock.elapsedRealtime();
-        Timer timer = new Timer();
+        timer = new Timer();
 
         // Update the elapsed time every second.
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -55,5 +56,11 @@ public class LiveDataTimerViewModel extends ViewModel {
     @SuppressWarnings("unused")  // Will be used when step is completed
     public LiveData<Long> getElapsedTime() {
         return mElapsedTime;
+    }
+
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        timer.cancel();
     }
 }
