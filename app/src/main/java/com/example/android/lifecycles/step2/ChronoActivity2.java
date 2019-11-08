@@ -16,10 +16,11 @@
 
 package com.example.android.lifecycles.step2;
 
-import androidx.lifecycle.ViewModelProviders;
+
 import android.os.Bundle;
 import android.os.SystemClock;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import android.widget.Chronometer;
 
 import com.example.android.codelabs.lifecycle.R;
@@ -33,7 +34,7 @@ public class ChronoActivity2 extends AppCompatActivity {
 
         // The ViewModelStore provides a new ViewModel or one previously created.
         ChronometerViewModel chronometerViewModel
-                = ViewModelProviders.of(this).get(ChronometerViewModel.class);
+                = new ViewModelProvider(this).get(ChronometerViewModel.class);
 
         // Get the chronometer reference
         Chronometer chronometer = findViewById(R.id.chronometer);

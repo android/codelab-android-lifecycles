@@ -22,11 +22,11 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.android.codelabs.lifecycle.R;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.example.android.codelabs.lifecycle.R;
 
 /**
  * Shows a simple form with a button and displays the value of a property in a ViewModel.
@@ -40,9 +40,9 @@ public class SavedStateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.saved_state_activity);
 
-        // TODO: Pass a SavedStateVMFactory so you can use SavedStateHandle
-        // Obtain ViewModel
-        mSavedStateViewModel = ViewModelProviders.of(this).get(SavedStateViewModel.class);
+
+        // Obtain the ViewModel
+        mSavedStateViewModel = new ViewModelProvider(this).get(SavedStateViewModel.class);
 
         // Show the ViewModel property's value in a TextView
         mSavedStateViewModel.getName().observe(this, new Observer<String>() {

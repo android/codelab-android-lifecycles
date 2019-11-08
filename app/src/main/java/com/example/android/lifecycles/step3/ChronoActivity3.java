@@ -17,7 +17,7 @@
 package com.example.android.lifecycles.step3;
 
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +37,7 @@ public class ChronoActivity3 extends AppCompatActivity {
 
         setContentView(R.layout.chrono_activity_3);
 
-        mLiveDataTimerViewModel = ViewModelProviders.of(this).get(LiveDataTimerViewModel.class);
+        mLiveDataTimerViewModel = new ViewModelProvider(this).get(LiveDataTimerViewModel.class);
 
         subscribe();
     }
