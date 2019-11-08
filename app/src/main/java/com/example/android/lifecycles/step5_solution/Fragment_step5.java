@@ -18,10 +18,13 @@ package com.example.android.lifecycles.step5_solution;
 
 
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
+
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +50,7 @@ public class Fragment_step5 extends Fragment {
         View root = inflater.inflate(R.layout.fragment_step5, container, false);
         mSeekBar = root.findViewById(R.id.seekBar);
 
-        mSeekBarViewModel = ViewModelProviders.of(getActivity()).get(SeekBarViewModel.class);
+        mSeekBarViewModel = new ViewModelProvider(requireActivity()).get(SeekBarViewModel.class);
 
         subscribeSeekBar();
 
@@ -74,13 +77,14 @@ public class Fragment_step5 extends Fragment {
         });
 
         // Update the SeekBar when the ViewModel is changed.
-        mSeekBarViewModel.seekbarValue.observe(getActivity(), new Observer<Integer>() {
-            @Override
-            public void onChanged(@Nullable Integer value) {
-                if (value != null) {
-                    mSeekBar.setProgress(value);
-                }
-            }
-        });
+        mSeekBarViewModel.seekbarValue.observe(
+                requireActivity(), new Observer<Integer>() {
+                    @Override
+                    public void onChanged(@Nullable Integer value) {
+                        if (value != null) {
+                            mSeekBar.setProgress(value);
+                        }
+                    }
+                });
     }
 }
