@@ -28,3 +28,8 @@ If you find errors in the codelab steps or the code, please file them [here](htt
 
     ./adb shell ps -A |grep lifecycle
     ./adb shell am kill com.example.android.codelabs.lifecycle
+
+7. Some UI elements, including EditText, save their state using their own onSaveInstanceState implementation.
+   This state is restored after a process is killed the same way it's restored after a configuration change.
+
+8. Use SavedStateHandle to save ViewModel properties during process kill.
