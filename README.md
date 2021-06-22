@@ -87,7 +87,7 @@ If you find errors in the codelab steps or the code, please file them [here](htt
             throw new IllegalArgumentException("Unexpected state value " + state);
         }
 
-        ```
+    ```
 
     A class can monitor the component's lifecycle status by adding annotations to its methods. Then you can add an observer by calling the addObserver() method of the Lifecycle class and passing an instance of your observer, as shown in the following example:
 
