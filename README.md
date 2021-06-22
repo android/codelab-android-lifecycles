@@ -86,12 +86,13 @@ If you find errors in the codelab steps or the code, please file them [here](htt
             }
             throw new IllegalArgumentException("Unexpected state value " + state);
         }
+
         ```
 
     A class can monitor the component's lifecycle status by adding annotations to its methods. Then you can add an observer by calling the addObserver() method of the Lifecycle class and passing an instance of your observer, as shown in the following example:
 
-
     ```
+
     public class MyObserver implements LifecycleObserver {
         @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
         public void connectListener() {
@@ -105,6 +106,7 @@ If you find errors in the codelab steps or the code, please file them [here](htt
     }
 
     myLifecycleOwner.getLifecycle().addObserver(new MyObserver());
+
     ```
 
    ***LifecycleOwner*** is a single method interface that denotes that the class has a Lifecycle. It has one method, getLifecycle(), which must be implemented by the class
