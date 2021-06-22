@@ -100,6 +100,14 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.example.android.lifecycles.step7_lifeCycleRegistry.LocationActivity"
+            android:label="LC Step7 Lifecycle Registry">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
