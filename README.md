@@ -35,7 +35,7 @@ If you find errors in the codelab steps or the code, please file them [here](htt
 
    **Think of the states as nodes of a graph and events as the edges between these nodes**
 
-    [![LifeCycle State  up and down events ](https://developer.android.com/images/topic/libraries/architecture/lifecycle-states.svg)]
+    ![LifeCycle State  up and down events ](https://developer.android.com/images/topic/libraries/architecture/lifecycle-states.svg)
 
     ```
      static State getStateAfter(Event event) {
