@@ -31,7 +31,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.example.android.lifecycles.step1.ChronoActivity1"
-            android:label="LC Step1">
+            android:label="LC Step1"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -39,63 +40,72 @@
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step2.ChronoActivity2"
-            android:label="LC Step2">
+            android:label="LC Step2"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step3.ChronoActivity3"
-            android:label="LC Step3">
+            android:label="LC Step3"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step3_solution.ChronoActivity3"
-            android:label="LC Step3 Sol">
+            android:label="LC Step3 Sol"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step4_solution.LocationActivity"
-            android:label="LC Step4">
+            android:label="LC Step4"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step4.LocationActivity"
-            android:label="LC Step4">
+            android:label="LC Step4"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step5.Activity_step5"
-            android:label="LC Step5">
+            android:label="LC Step5"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step5_solution.Activity_step5"
-            android:label="LC Step5 Sol">
+            android:label="LC Step5 Sol"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step6.SavedStateActivity"
-            android:label="LC Step6">
+            android:label="LC Step6"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.android.lifecycles.step6_solution.SavedStateActivity"
-            android:label="LC Step6 Sol">
+            android:label="LC Step6 Sol"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
